@@ -3,195 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vobel - Desenvolvimento de software sob medida para sua empresa">
-    <title>Vobel - Soluções em Tecnologia</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Vobel é a holding que possui e opera ArenApp, Clinika Vet, AlertaCam e RH Digital EXE. Empresas próprias nos mercados esportivo, veterinário, de segurança e de RH.">
+    <meta name="theme-color" content="#111111">
+    <title>Vobel — Holding de produtos digitais</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <img src="logo.png" alt="Vobel Logo" class="header__logo">
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li><a href="#inicio" class="nav__link">Início</a></li>
-                        <li><a href="#solucoes" class="nav__link">Soluções</a></li>
-                        <li><a href="#processo" class="nav__link">Processo</a></li>
-                        <li><a href="#cases" class="nav__link">Cases</a></li>
-                        <li><a href="#contato" class="nav__link nav__link--highlight">Fale Conosco</a></li>
-                    </ul>
-                </nav>
-            </div>
+
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#topo" class="header__brand" aria-label="Vobel, início">
+                <img src="logo.svg" alt="Vobel" class="header__logo">
+            </a>
+
+            <nav class="header__nav" id="nav" aria-label="Navegação principal">
+                <ul class="nav__list">
+                    <li><a href="#grupo" class="nav__link">O grupo</a></li>
+                    <li><a href="#produtos" class="nav__link">Empresas</a></li>
+                    <li><a href="#atuacao" class="nav__link">Atuação</a></li>
+                    <li><a href="#contato" class="nav__link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contato" class="btn btn--primary btn--sm header__cta">Contato</a>
+
+            <button class="mobile-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero__content">
-                <h1 class="hero__title">Transforme seu negócio com Inteligência Artificial</h1>
-                <p class="hero__subtitle">Desenvolvemos soluções digitais inteligentes que reduzem custos e automatizam processos através da IA, levando sua empresa ao próximo nível</p>
-                <div class="hero__cta">
-                    <a href="#contato" class="btn btn--primary">Solicitar Consultoria</a>
-                    <a href="#solucoes" class="btn btn--secondary">Conhecer Soluções</a>
+    <main id="topo">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__shade" aria-hidden="true"></div>
+            <div class="container hero__grid">
+                <h1 id="hero-title" class="hero__title">A holding por trás das empresas. Produtos próprios, em operação.</h1>
+                <div class="hero__aside">
+                    <p class="hero__lead">A Vobel possui e opera ArenApp, Clinika Vet, AlertaCam e RH Digital EXE. Cada uma é uma empresa do grupo, com marca e mercado próprios.</p>
+                    <p class="hero__place">Goiânia, Brasil</p>
+                    <div class="hero__actions">
+                        <a href="#contato" class="btn btn--primary">Falar com a holding</a>
+                        <a href="#produtos" class="btn btn--ghost">Ver as empresas</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="solucoes" class="solutions">
-        <div class="container">
-            <h2 class="section__title">Nossas Soluções</h2>
-            <p class="section__subtitle">Tecnologia personalizada para cada desafio do seu negócio</p>
-            
-            <div class="solutions__grid">
-                <div class="solution-card">
-                    <i class="fas fa-brain solution-card__icon"></i>
-                    <h3 class="solution-card__title">Inteligência Artificial</h3>
-                    <p class="solution-card__description">Sistemas inteligentes que aprendem e evoluem, reduzindo custos operacionais em até 60%</p>
-                </div>
-                <div class="solution-card">
-                    <i class="fas fa-robot solution-card__icon"></i>
-                    <h3 class="solution-card__title">Automação Inteligente</h3>
-                    <p class="solution-card__description">Automatização de processos repetitivos com IA, aumentando eficiência e reduzindo erros</p>
-                </div>
-                <div class="solution-card">
-                    <i class="fas fa-code solution-card__icon"></i>
-                    <h3 class="solution-card__title">Sistemas Personalizados</h3>
-                    <p class="solution-card__description">Software sob medida com tecnologias modernas e integração com IA</p>
-                </div>
-                <div class="solution-card">
-                    <i class="fas fa-chart-line solution-card__icon"></i>
-                    <h3 class="solution-card__title">Análise Preditiva</h3>
-                    <p class="solution-card__description">Previsões e insights baseados em dados para tomada de decisões inteligente</p>
-                </div>
+        <section class="logo-bar" aria-label="Empresas do grupo">
+            <div class="container logo-bar__row">
+                <a href="https://arenapp.com.br/" target="_blank" rel="noopener noreferrer" class="brand">
+                    <img src="images/products/arenapp.svg" alt="" width="36" height="36">
+                    <span>arenapp</span>
+                </a>
+                <a href="https://clinika.vet/" target="_blank" rel="noopener noreferrer" class="brand brand--paw">
+                    <img src="images/products/clinika.png" alt="" width="40" height="40">
+                    <span>Clinika</span>
+                </a>
+                <a href="https://alerta.cam/" target="_blank" rel="noopener noreferrer" class="brand brand--badge">
+                    <img src="images/products/alertacam.png" alt="">
+                    <span>AlertaCam</span>
+                </a>
+                <a href="https://rhdigitalexe.com.br/" target="_blank" rel="noopener noreferrer" class="brand brand--full">
+                    <img src="images/products/rhdigital.png" alt="RH Digital EXE">
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="processo" class="process">
-        <div class="container">
-            <h2 class="section__title">Nosso Processo</h2>
-            <p class="section__subtitle">Metodologia ágil com foco em resultados através da IA</p>
-            
-            <div class="process__steps">
-                <div class="process-step">
-                    <div class="process-step__number">1</div>
-                    <h3 class="process-step__title">Análise de Dados</h3>
-                    <p class="process-step__description">Identificamos oportunidades de automação e redução de custos</p>
+        <section id="grupo" class="showcase">
+            <div class="container showcase__layout">
+                <div class="showcase__copy">
+                    <p class="eyebrow">O grupo</p>
+                    <h2>Quatro empresas. Uma holding por trás de <span>cada uma</span>.</h2>
+                    <p>A Vobel não desenvolve software sob encomenda. O grupo existe para criar, deter e operar as próprias empresas — cada uma no seu mercado.</p>
+                    <a href="#produtos" class="btn btn--primary">Conhecer as empresas</a>
                 </div>
-                <div class="process-step">
-                    <div class="process-step__number">2</div>
-                    <h3 class="process-step__title">Estratégia IA</h3>
-                    <p class="process-step__description">Definimos as melhores tecnologias e modelos de IA para seu caso</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step__number">3</div>
-                    <h3 class="process-step__title">Implementação</h3>
-                    <p class="process-step__description">Desenvolvemos e integramos soluções inteligentes ao seu negócio</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step__number">4</div>
-                    <h3 class="process-step__title">Otimização</h3>
-                    <p class="process-step__description">Monitoramento contínuo e evolução dos modelos de IA</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="cases" class="cases">
-        <div class="container">
-            <h2 class="section__title">Cases de Sucesso</h2>
-            <p class="section__subtitle">Conheça alguns dos nossos projetos</p>
-            
-            <div class="testimonials">
-                <div class="testimonial-card">
-                    <div class="testimonial-card__content">
-                        <p class="testimonial-card__text">"A Vobel revolucionou nossa operação com IA. Reduzimos custos operacionais em 45% e aumentamos a produtividade em mais de 70%. O retorno sobre o investimento superou todas as expectativas."</p>
-                        <div class="testimonial-card__author">
-                            <strong>Carlos Silva</strong>
-                            <span>Diretor de Inovação, TechCorp</span>
+                <div class="showcase__cards">
+                    <article class="demo-card">
+                        <div class="demo-card__screen" aria-hidden="true">
+                            <div class="ui-window">
+                                <div class="ui-window__bar"><span></span><span></span><span></span></div>
+                                <div class="ui-window__body">
+                                    <div class="ui-row"><i></i><em></em></div>
+                                    <div class="ui-row"><i></i><em></em></div>
+                                    <div class="ui-row"><i></i><em></em></div>
+                                    <div class="ui-pill">Em produção</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card__content">
-                        <p class="testimonial-card__text">"A automação inteligente implementada pela Vobel eliminou processos manuais e reduziu erros em 95%. Nossa equipe agora foca em atividades estratégicas enquanto a IA cuida do operacional."</p>
-                        <div class="testimonial-card__author">
-                            <strong>Ana Santos</strong>
-                            <span>CEO, Inovativa Solutions</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                        <h3>Empresas próprias</h3>
+                    </article>
 
-    <section id="contato" class="contact">
-        <div class="container">
-            <div class="contact__content">
-                <h2 class="section__title">Vamos Conversar?</h2>
-                <p class="section__subtitle">Entre em contato e descubra como podemos transformar seu negócio com IA</p>
-                
-                <div class="contact__details">
-                    <div class="contact__item">
-                        <i class="fas fa-phone"></i>
-                        <div class="contact__info">
-                            <h3>Telefone</h3>
-                            <a href="tel:+5562983452041">+55 (62) 98345-2041</a>
+                    <article class="demo-card">
+                        <div class="demo-card__screen" aria-hidden="true">
+                            <div class="ui-chat">
+                                <div class="ui-chat__top">
+                                    <b></b>
+                                    <strong>Atendimento</strong>
+                                </div>
+                                <div class="ui-bubble ui-bubble--in">Pedido recebido e classificado.</div>
+                                <div class="ui-bubble ui-bubble--out">Segue o resumo para o time.</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact__item">
-                        <i class="fas fa-envelope"></i>
-                        <div class="contact__info">
-                            <h3>E-mail</h3>
-                            <a href="mailto:contato@vobel.dev">contato@vobel.dev</a>
+                        <h3>Em operação no mercado</h3>
+                    </article>
+
+                    <article class="demo-card demo-card--wide">
+                        <div class="demo-card__screen" aria-hidden="true">
+                            <div class="ui-arch">
+                                <div class="ui-node">Esporte</div>
+                                <div class="ui-line"></div>
+                                <div class="ui-node ui-node--accent">Vet</div>
+                                <div class="ui-line"></div>
+                                <div class="ui-node">RH</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact__item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="contact__info">
-                            <h3>Localização</h3>
-                            <p>Goiânia, GO</p>
-                        </div>
-                    </div>
+                        <h3>Mercados diferentes</h3>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="produtos" class="cases">
+            <div class="container cases__layout">
+                <div>
+                    <p class="eyebrow eyebrow--light">Empresas do grupo</p>
+                    <h2 class="cases__title">As marcas que a Vobel possui</h2>
+                    <div class="cases__tabs" role="tablist" aria-label="Empresas da Vobel">
+                        <button class="case-tab is-active" role="tab" id="tab-arenapp" aria-selected="true" aria-controls="panel-arenapp" data-target="arenapp">
+                            <span class="case-tab__dot" aria-hidden="true"></span>
+                            ArenApp
+                        </button>
+                        <button class="case-tab" role="tab" id="tab-clinika" aria-selected="false" aria-controls="panel-clinika" data-target="clinika" tabindex="-1">
+                            <span class="case-tab__dot" aria-hidden="true"></span>
+                            Clinika Vet
+                        </button>
+                        <button class="case-tab" role="tab" id="tab-alertacam" aria-selected="false" aria-controls="panel-alertacam" data-target="alertacam" tabindex="-1">
+                            <span class="case-tab__dot" aria-hidden="true"></span>
+                            AlertaCam
+                        </button>
+                        <button class="case-tab" role="tab" id="tab-rh" aria-selected="false" aria-controls="panel-rh" data-target="rh" tabindex="-1">
+                            <span class="case-tab__dot" aria-hidden="true"></span>
+                            RH Digital EXE
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cases__stage">
+                    <article class="stage is-active" role="tabpanel" id="panel-arenapp" aria-labelledby="tab-arenapp" data-panel="arenapp">
+                        <div class="stage__visual stage__visual--arena">
+                            <img src="images/products/arenapp.svg" alt="" class="stage__mark">
+                            <div class="float-chip">
+                                <strong>Reserva confirmada</strong>
+                                <span>Quadra 02 · hoje, 19h</span>
+                            </div>
+                        </div>
+                        <div class="stage__copy">
+                            <p class="stage__kicker">Mercado esportivo</p>
+                            <h3>ArenApp é a empresa do grupo no esporte.</h3>
+                            <p>Cuida da operação de arenas e quadras: agenda, ocupação e a rotina de quem vive de quadra. Marca própria da Vobel, em operação.</p>
+                            <a class="btn btn--primary" href="https://arenapp.com.br/" target="_blank" rel="noopener noreferrer">Conhecer o ArenApp</a>
+                        </div>
+                    </article>
+
+                    <article class="stage" role="tabpanel" id="panel-clinika" aria-labelledby="tab-clinika" data-panel="clinika" hidden>
+                        <div class="stage__visual stage__visual--vet">
+                            <img src="images/products/clinika.png" alt="" class="stage__mark stage__mark--blend">
+                            <div class="float-chip">
+                                <strong>Consulta na agenda</strong>
+                                <span>Clínica · hoje, 14h</span>
+                            </div>
+                        </div>
+                        <div class="stage__copy">
+                            <p class="stage__kicker">Mercado veterinário</p>
+                            <h3>Clinika Vet é a empresa do grupo na veterinária.</h3>
+                            <p>Acompanha atendimento, organização e gestão no ritmo real da clínica. Marca própria da Vobel, com operação própria.</p>
+                            <a class="btn btn--primary" href="https://clinika.vet/" target="_blank" rel="noopener noreferrer">Conhecer a Clinika</a>
+                        </div>
+                    </article>
+
+                    <article class="stage" role="tabpanel" id="panel-alertacam" aria-labelledby="tab-alertacam" data-panel="alertacam" hidden>
+                        <div class="stage__visual stage__visual--cam">
+                            <img src="images/products/alertacam.png" alt="" class="stage__wordmark">
+                            <div class="float-chip float-chip--alert">
+                                <strong>Alerta enviado</strong>
+                                <span>Câmera · movimento detectado</span>
+                            </div>
+                        </div>
+                        <div class="stage__copy">
+                            <p class="stage__kicker">Segurança</p>
+                            <h3>AlertaCam é a empresa do grupo em segurança.</h3>
+                            <p>Leva o monitoramento para a conversa, com alertas no canal que a pessoa já usa — inclusive o WhatsApp. Marca própria da Vobel.</p>
+                            <a class="btn btn--primary" href="https://alerta.cam/" target="_blank" rel="noopener noreferrer">Conhecer o AlertaCam</a>
+                        </div>
+                    </article>
+
+                    <article class="stage" role="tabpanel" id="panel-rh" aria-labelledby="tab-rh" data-panel="rh" hidden>
+                        <div class="stage__visual stage__visual--rh">
+                            <img src="images/products/rhdigital.png" alt="" class="stage__wordmark">
+                            <div class="float-chip">
+                                <strong>Admissão em andamento</strong>
+                                <span>RH · documentos recebidos</span>
+                            </div>
+                        </div>
+                        <div class="stage__copy">
+                            <p class="stage__kicker">RH corporativo</p>
+                            <h3>RH Digital EXE é a empresa do grupo em RH.</h3>
+                            <p>Cuida da operação de pessoas nas empresas: rotinas, rastreio e continuidade. Marca própria da Vobel, no mercado corporativo.</p>
+                            <a class="btn btn--primary" href="https://rhdigitalexe.com.br/" target="_blank" rel="noopener noreferrer">Conhecer o RH Digital</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="atuacao" class="principles">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Como o grupo atua</p>
+                    <h2>O que orienta a holding</h2>
+                    <p>Cada empresa segue com vida própria. A Vobel existe para que elas operem com marca, mercado e continuidade — não para vender projeto de software.</p>
+                </div>
+                <div class="principles__grid">
+                    <article class="principle">
+                        <span class="principle__num">01</span>
+                        <h3>Empresa própria, não projeto de cliente</h3>
+                        <p>A Vobel detém as marcas. O grupo não vende hora de desenvolvimento e não atua como fábrica de software.</p>
+                    </article>
+                    <article class="principle">
+                        <span class="principle__num">02</span>
+                        <h3>Cada marca no seu mercado</h3>
+                        <p>ArenApp, Clinika Vet, AlertaCam e RH Digital EXE falam com públicos diferentes e mantêm identidade própria.</p>
+                    </article>
+                    <article class="principle">
+                        <span class="principle__num">03</span>
+                        <h3>Operação antes do discurso</h3>
+                        <p>As empresas estão no ar. O grupo se apresenta pelo que já funciona, não por um catálogo de serviços.</p>
+                    </article>
+                    <article class="principle">
+                        <span class="principle__num">04</span>
+                        <h3>Contato com a holding</h3>
+                        <p>Falar com a Vobel é falar sobre o grupo e as empresas que ele possui: parceria, imprensa ou uma conversa direta.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <div class="container contact__layout">
+                <div class="contact__copy">
+                    <p class="eyebrow">Contato</p>
+                    <h2>Fale com a holding</h2>
+                    <p>Assunto sobre as empresas do grupo, parceria ou imprensa. A Vobel não desenvolve sistema sob encomenda.</p>
+
+                    <ul class="contact__list">
+                        <li>
+                            <a href="https://wa.me/5562983452041?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Vobel." target="_blank" rel="noopener noreferrer">
+                                <span class="contact__label">WhatsApp</span>
+                                <strong>+55 (62) 98345-2041</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contato@vobel.dev">
+                                <span class="contact__label">E-mail</span>
+                                <strong>contato@vobel.dev</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="contact__label">Onde estamos</span>
+                                <strong>Goiânia, GO</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contact__form" id="contact-form">
+                    <div class="form-field">
+                        <label for="form-name">Nome ou empresa</label>
+                        <input type="text" id="form-name" name="name" autocomplete="name" placeholder="Ex: Roberto Mendes, Grupo Alfa" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="form-email">E-mail</label>
+                        <input type="email" id="form-email" name="email" autocomplete="email" placeholder="seu@empresa.com.br" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="form-phone">Telefone ou WhatsApp</label>
+                        <input type="tel" id="form-phone" name="phone" autocomplete="tel" placeholder="(62) 99999-9999" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="form-message">Como podemos ajudar?</label>
+                        <textarea id="form-message" name="message" placeholder="Conte se o assunto é uma empresa do grupo, uma parceria ou outro contato com a holding." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--block">Enviar mensagem</button>
+                    <p id="form-alert" class="form-feedback" role="status">Mensagem enviada. Retornamos em breve.</p>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer__content">
+            <div class="footer__grid">
                 <div class="footer__brand">
-                    <img src="logo.png" alt="Vobel Logo" class="footer__logo">
-                    <p>Transformando negócios através da tecnologia</p>
+                    <img src="logo.svg" alt="Vobel" class="footer__logo">
+                    <p>Holding de produtos digitais. Possui e opera ArenApp, Clinika Vet, AlertaCam e RH Digital EXE.</p>
                 </div>
-                <div class="footer__links">
-                    <div class="footer__column">
-                        <h4>Empresa</h4>
-                        <ul>
-                            <li><a href="#sobre">Sobre</a></li>
-                            <li><a href="#solucoes">Soluções</a></li>
-                            <li><a href="#cases">Cases</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__column">
-                        <h4>Contato</h4>
-                        <ul>
-                            <li><a href="mailto:contato@vobel.dev">contato@vobel.dev</a></li>
-                            <li><a href="tel:+5562983452041">+55 (62) 98345-2041</a></li>
-                        </ul>
-                    </div>
+                <div>
+                    <h2>Empresas</h2>
+                    <ul>
+                        <li><a href="https://arenapp.com.br/" target="_blank" rel="noopener noreferrer">ArenApp</a></li>
+                        <li><a href="https://clinika.vet/" target="_blank" rel="noopener noreferrer">Clinika Vet</a></li>
+                        <li><a href="https://alerta.cam/" target="_blank" rel="noopener noreferrer">AlertaCam</a></li>
+                        <li><a href="https://rhdigitalexe.com.br/" target="_blank" rel="noopener noreferrer">RH Digital EXE</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Contato</h2>
+                    <ul>
+                        <li><a href="mailto:contato@vobel.dev">contato@vobel.dev</a></li>
+                        <li><a href="tel:+5562983452041">+55 (62) 98345-2041</a></li>
+                        <li><a href="https://wa.me/5562983452041" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li>Goiânia, GO — Brasil</li>
+                    </ul>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; 2024 Vobel. Todos os direitos reservados.</p>
+                <p>© 2026 Vobel Tecnologia. Todos os direitos reservados.</p>
+                <a href="#topo">Voltar ao topo</a>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
